@@ -2,11 +2,15 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
+    color: #101828;
+    font-family: "SF Pro Text";
+    font-style: normal;
 }
 
 .container {
-    max-width: 1170px;
-    /*padding: 0 15px;*/
+    max-width: 1124px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -21,21 +25,17 @@ body {
 
 
 .title h2 {
-    color: #101828;
     font-family: "Inter";
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
     line-height: 144%;
     margin-bottom: 20px;
 }
 
 .title h3 {
-    color:  #101828;
     /* SF Title 2 Semibold */
     font-family: "SF Pro Text";
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
     line-height: 24px; 
     margin-top: 30px;
@@ -43,10 +43,7 @@ body {
 
 .title p {
     margin-top: 0;
-    color: #101828;
-    font-family: "SF Pro Text";
     font-size: 15px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px; 
 }
@@ -61,9 +58,7 @@ body {
     background:  #2D66EE;
     padding: 10px 24px;
     color: #FFF;
-    font-family: "SF Pro Text";
     font-size: 14px;
-    font-style: normal;
     font-weight: 600;
     line-height: 18px;
     text-align: left;
@@ -78,9 +73,7 @@ body {
 
 .form-label label {
     color: #667085;
-    font-family: "SF Pro Text";
     font-size: 13px;
-    font-style: normal;
     font-weight: 500;
     line-height: 16px; 
 }
@@ -88,10 +81,7 @@ body {
 .form-label input {
     border: 0;
     border-bottom: 0.7px solid #D0D5DD;
-    color: #101828;
-    font-family: "SF Pro Text";
     font-size: 17px;
-    font-style: normal;
     font-weight: 400;
     line-height: 22px;
     max-width: 220px;

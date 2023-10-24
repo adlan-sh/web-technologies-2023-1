@@ -1,3 +1,5 @@
+/* DEVELOPMENT-CYCLE */
+
 .development-cycle {
     position: relative;
     z-index: 2;
@@ -11,11 +13,10 @@
 
 .development-cycle p {
     color: #344054;
-    font-family: "SF Pro Text";
     font-size: 17px;
-    font-style: normal;
     font-weight: 400;
     line-height: 22px; 
+    max-width: 510px;
 }
 
 .development-cycle span {
@@ -23,12 +24,10 @@
 }
 
 .links ul {
-    
-    margin-top: 0;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    
 }
 
 .links li {

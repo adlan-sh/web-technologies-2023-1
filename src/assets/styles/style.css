@@ -17,7 +17,185 @@
 }
 
 @media (max-width: 768px) {
-    body {
-        background-color: black;
+
+    /* HEADER */
+
+    .header {
+        margin: 0 auto;
+    }
+
+    .nav, .phone-number {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+
+    .header .container {
+        min-height: 90px;
+    }
+
+    .header--mobile .container {
+        min-height: 100vh;
+        padding-top: 140px;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .header--mobile h1 {
+        font-size: 48px;
+        margin-bottom: 36px;
+    }
+
+    .header--mobile ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 52px;
+    }
+
+    .header--mobile li {
+        padding: 16px 0;
+        font-size: 36px;
+    }
+
+    .header--mobile .nav, .header--mobile .phone-number {
+        display: block;
+    }
+
+    .header--mobile .hidden {
+        display: inline-block;
+    }
+
+    .header--mobile .phone-number {
+        display: flex;
+        align-items: center;
+    }
+
+    .header--mobile .contacts {
+        margin-bottom: 130px;
+    }
+
+    .phone-number span:first-of-type {
+        padding-right: 32px;
+    }
+
+    /* ABOUT US */
+
+    .about-us .container {
+        max-height: 650px;
+    }
+
+    .about-us .title {
+        min-width: 380px;
+    }
+
+    .title h2 {
+        font-size: 28px;
+    }
+
+    .contact-form {
+        min-width: 350px;
+    }
+
+    .contact-form h3 {
+        font-size: 16px;
+    }
+
+    .form {
+        flex-direction: column;
+        gap: 32px;
+        align-items: start;
+    }
+
+    .bg-images {
+        top: -150px;
+    }
+
+    .bg-images img {
+        width: 150px;
+        height: 300px;
+    }
+
+    /* DEVELOPMENT-CYCLE */ 
+    
+    .development-cycle .container {
+        gap: 100px;
+    }
+
+    .links ul {
+        margin-top: 200px;
+        min-width: 250px;
+    }
+
+    .development-cycle p {
+        max-width: 350px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+
+    .footer .container {
+        padding: 0 50px;
+    }
+
+    
+    .company-info {
+        gap: 50px;
+    }
+
+    .number span, .post span, .address span, .request span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 426px) {
+    .container {
+        background-color: pink;
+    }
+
+    /* HEADER */
+
+    .email {
+        display: none;
+    }
+
+    .header--mobile h1 {
+        font-size: 20px;
+    }
+
+    .header--mobile li {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    .header--mobile .email {
+        display: flex;
+    };
+
+    .header--mobile .contacts {
+        flex-direction: column;
+    }
+
+    /* ABOUT-US */
+
+    .about-us .container {
+        flex-direction: column;
+        min-height: 900px;
+    }
+
+    .left-block {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .bg-images {
+        top: 0;
+        left: 25%;
     }
 }
