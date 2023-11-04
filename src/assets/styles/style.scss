@@ -132,102 +132,107 @@
 
     /*  DEVELOPED-PROJECTS */
 
-    .developed-projects .industries {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .developed-projects {
+        .industries {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .col {
+                &:last-of-type {
+                    ul {
+                        margin-top: 0;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        position: relative;
+                    }
+                }
+            }
+        }
+        .last-li {
+            position: absolute;
+            left: 100%;
+        }
+        .last-li--two {
+            top: 40%;
+        }
     }
-
-    .developed-projects .industries .col:last-of-type ul {
-        margin-top: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        position: relative;
-    }
-
-    .developed-projects .last-li{
-        position: absolute;
-        left: 100%;
-    }
-
-    .developed-projects .last-li--two {
-        top: 40%;
-    }
+    
 
     /* PROUD-PROJECTS */
 
-    .projects li {
-        font-size: 14px;
-    }
-
     .projects {
         flex-direction: column;
+        li {
+            font-size: 14px;
+        }
+        ul {
+            align-self: start;
+        }
+        a {
+            align-self: end;
+        }
     }
-
-    .projects ul {
-        align-self: start;
+    .about-project {
+        .left-block {
+            margin-top: -40px;
+        }
     }
-
-    .projects a {
-        align-self: end;
-    }
-
-    .about-project .left-block {
-        margin-top: -40px;
-    }
+    
 
     /* DISCUSS-PROJECT */
 
-    .discuss-projects .container {
-        flex-direction: column;
-        min-height: 428px;
-        justify-content: unset;
-        gap: 10px
-    };
-
-    .discuss-projects .title {
-        width: 50%;
+    .discuss-projects {
+        .container {
+            flex-direction: column;
+            min-height: 428px;
+            justify-content: unset;
+            gap: 10px;
+        }
+        .title {
+            width: 50%;
+        }
+        .contact-form {
+            margin-top: 0;
+        }
     }
-
-    .discuss-projects .contact-form {
-        margin-top: 0;
-    }
+    
 
     /* DEVELOPMENT-STAGES */
 
     .development-stages {
         min-height: 1300px;
+        .cards {
+            flex-direction: column;
+            gap: 32px;
+        }
+        .col {
+            gap: 32px;
+            width: 100%;
+        }
+        .card {
+            max-width: none;
+        }
     }
-
-    .development-stages .cards {
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    .development-stages .col {
-        gap: 32px;
-        width: 100%;
-    }
-
-    .development-stages .card {
-        max-width: none;
-    }
+    
 
     /* TEAM */
 
-    .team .container {
-        flex-direction: column;
-        position: relative;
+    .team {
+        .container {
+            flex-direction: column;
+            position: relative;
+        }
+        .left-block {
+            .statistics {
+                margin-top: 420px;
+                justify-content: unset;
+            }
+        }
+        .video {
+            position: absolute;
+            top: 20%;
+        }
     }
-
-    .team .left-block .statistics {
-        margin-top: 420px;
-        justify-content: unset;
-    }
-
-    .team .video {
-        position: absolute;
-        top: 20%;
-    }
+    
 
     /* GET-BOOK */
 
@@ -362,214 +367,201 @@
 
     /* DEVELOPED-PROJECTS */
 
-    .developed-projects .title {
-        width: 100%;
-    }
-    
-    .developed-projects li span {
-        font-size: 14px;
+    .developed-projects {
+        .title {
+            width: 100%;
+        }
+        li {
+            span {
+                font-size: 14px;
+            }
+        }
     }
 
     /* PROUD-PROJECTS */
 
-    .proud-projects .container {
-        position: relative;
-    }
-
-    .proud-projects .projects a {
-        position: absolute;
-        top: 92%;
-        left: 25%;
-    }
-
-    .proud-projects .download-links {
-        margin-bottom: 120px;
-    }
-
-    .proud-projects .about-project {
-        flex-direction: column-reverse;
-    }
-
-    .proud-projects .left-block {
-        gap: 0;
-    }
-
-    .proud-projects .left-block .title p {
-        margin-bottom: 0;
-    }
-
-    .proud-projects .left-block p {
-        font-size: 14px;
-    }
-
-    .proud-projects .right-block img {
-        width: 100%;
-    };
-
-    .proud-projects .title p {
-        width: 100%;
-    }
-
-    .proud-projects ul {
-        flex-wrap: wrap;
-    }
-
-    .proud-projects li {
-        margin-bottom: 12px;
-    };
+    .proud-projects {
+	.container {
+		position: relative;
+	}
+	.projects {
+		a {
+			position: absolute;
+			top: 92%;
+			left: 25%;
+		}
+	}
+	.download-links {
+		margin-bottom: 120px;
+	}
+	.about-project {
+		flex-direction: column-reverse;
+	}
+	.left-block {
+		gap: 0;
+		.title {
+			p {
+				margin-bottom: 0;
+			}
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	.right-block {
+		img {
+			width: 100%;
+		}
+	}
+	.title {
+		p {
+			width: 100%;
+		}
+	}
+	ul {
+		flex-wrap: wrap;
+	}
+	li {
+		margin-bottom: 12px;
+	}
+}
 
     /* DISCUSS-PROJECT */
 
-    .discuss-projects .container {
-        gap: 120px;
-    }
-
-    .discuss-projects .title {
-        width: 120%;
-    }
-
-    .discuss-projects .inputs {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .discuss-projects .contact-form {
-        margin-bottom: 50px;
-    }
-
-    .discuss-projects form input {
-        width: 100%;
-    }
-
-    .discuss-projects form a {
-        align-self: center;
-        width: 80%;
-    }
+    .discuss-projects {
+        .container {
+            gap: 120px;
+        }
+        .title {
+            width: 120%;
+        }
+        .inputs {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form {
+            margin-bottom: 50px;
+        }
+        form {
+            input {
+                width: 100%;
+            }
+            a {
+                align-self: center;
+                width: 80%;
+            }
+        }
+    }    
 
     /* DEVELOPMENT-STAGES */
 
     .development-stages {
         min-height: 1450px;
-    }
-
-    .development-stages .title {
-        width: 80%;
-    }
+        .title {
+            width: 80%;
+        }
+    }    
 
     /* TEAM */
 
-    .team .title p {
-        width: 100%;
-    }
-
-    .team .left-block {
-        gap: 0;
-    }
-
-    .team .video {
-        padding-top: 30px;
-    }
-
-    .team .video img {
-        width: 95%;
-    }
-
-    .team .left-block .statistics {
-        margin-top: 70%;
-    }
-
-    .team .statistics p {
-        font-size: 14px;
-    }
-
-    .team .statistics p span {
-        font-size: 28px;
-    }
+    .team {
+        .title {
+            p {
+                width: 100%;
+            }
+        }
+        .left-block {
+            gap: 0;
+            .statistics {
+                margin-top: 70%;
+            }
+        }
+        .video {
+            padding-top: 30px;
+            img {
+                width: 95%;
+            }
+        }
+        .statistics {
+            p {
+                font-size: 14px;
+                span {
+                    font-size: 28px;
+                }
+            }
+        }
+    }    
 
     /* GET-BOOK */
 
-    .get-book .title {
-        width: 55%;
+    .get-book {
+        .title {
+            width: 55%;
+        }
+        .container {
+            position: relative;
+            flex-direction: column;
+            gap: 100px;
+            max-height: 1000px;
+        }
+        .left-block {
+            gap: 250px;
+        }
+        .contact-form {
+            width: 50%;
+            margin-left: 8%;
+            a {
+                align-self: flex-start;
+            }
+        }
+        form {
+            gap: 60px;
+            .top-label {
+                gap: 60px;
+            }
+        }
     }
-
-    .get-book .container {
-        position: relative;
-        flex-direction: column;
-        gap: 100px;
-        max-height: 1000px;
-    }
-
-    .get-book .left-block {
-        gap: 250px;
-    }
-
-    .get-book .contact-form {
-        width: 50%;
-        margin-left: 8%;
-    }
-
-    .get-book form {
-        gap: 60px;
-    }
-
-    .get-book form .top-label {
-        gap: 60px;
-    }
-
-    .get-book .contact-form a {
-        align-self: flex-start;
-    }
-
     .book {
         position: absolute;
         top: 15%;
         left: 30%;
+        img {
+            width: 160px;
+        }
     }
-
-    .book img {
-        width: 160px
-    };
 
     /* FAQ */
 
-    .faq .left-block {
-        gap: 0;
-    }
-
-    .faq .questions  {
-        gap: 0;
-    }
-
-    .faq .question {
-        justify-content: unset;
-        position: relative;
-    }
-
-    .faq .question .faq-icon {
-        align-self: center;
-        position: absolute;
-        left: 55%;
-        top: 20px;
-    }
-
-    .faq .question .faq-icon--active {
-        
-    }
-
-    .faq .questions .question-text {
-        width: 65%;
-    }
-
-    .faq .questions .question-text h3 {
-        font-size: 20px;
-        width: 80%;
-        padding-bottom: 40px;
-        margin-bottom: 0;
-    }
-
-    .faq .questions .question-text p {
-        font-size: 15px;
-    }
+    .faq {
+        .left-block {
+            gap: 0;
+        }
+        .questions {
+            gap: 0;
+            .question-text {
+                width: 65%;
+                h3 {
+                    font-size: 20px;
+                    width: 80%;
+                    padding-bottom: 40px;
+                    margin-bottom: 0;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+        .question {
+            justify-content: unset;
+            position: relative;
+            .faq-icon {
+                align-self: center;
+                position: absolute;
+                left: 55%;
+                top: 20px;
+            }
+        }
+    }    
 
     /* FOOTER */
 
