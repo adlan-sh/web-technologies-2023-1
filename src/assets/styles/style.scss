@@ -8,6 +8,10 @@
 @import "./components/developed-projects.scss";
 @import "./components/proud-projects.scss";
 @import "./components/discuss-projects.scss";
+@import "./components/development-stages.scss";
+@import "./components/team.scss";
+@import "./components/get-book.scss";
+@import "./components/faq.scss";
 @import "./components/footer.scss";
 
 
@@ -124,7 +128,120 @@
             margin-top: 200px;
             min-width: 250px;
         }
-    }    
+    }
+
+    /*  DEVELOPED-PROJECTS */
+
+    .developed-projects .industries {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .developed-projects .industries .col:last-of-type ul {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+    .developed-projects .last-li{
+        position: absolute;
+        left: 100%;
+    }
+
+    .developed-projects .last-li--two {
+        top: 40%;
+    }
+
+    /* PROUD-PROJECTS */
+
+    .projects li {
+        font-size: 14px;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .projects ul {
+        align-self: start;
+    }
+
+    .projects a {
+        align-self: end;
+    }
+
+    .about-project .left-block {
+        margin-top: -40px;
+    }
+
+    /* DISCUSS-PROJECT */
+
+    .discuss-projects .container {
+        flex-direction: column;
+        min-height: 428px;
+        justify-content: unset;
+        gap: 10px
+    };
+
+    .discuss-projects .title {
+        width: 50%;
+    }
+
+    .discuss-projects .contact-form {
+        margin-top: 0;
+    }
+
+    /* DEVELOPMENT-STAGES */
+
+    .development-stages {
+        min-height: 1300px;
+    }
+
+    .development-stages .cards {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .development-stages .col {
+        gap: 32px;
+        width: 100%;
+    }
+
+    .development-stages .card {
+        max-width: none;
+    }
+
+    /* TEAM */
+
+    .team .container {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .team .left-block .statistics {
+        margin-top: 420px;
+        justify-content: unset;
+    }
+
+    .team .video {
+        position: absolute;
+        top: 20%;
+    }
+
+    /* GET-BOOK */
+
+    .get-book form .top-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    /* FAQ */
+
+    .faq .questions {
+        flex-direction: column;
+    }
 
     /* FOOTER */
 
@@ -241,6 +358,217 @@
         li {
             font-size: 20px;
         }
+    }
+
+    /* DEVELOPED-PROJECTS */
+
+    .developed-projects .title {
+        width: 100%;
+    }
+    
+    .developed-projects li span {
+        font-size: 14px;
+    }
+
+    /* PROUD-PROJECTS */
+
+    .proud-projects .container {
+        position: relative;
+    }
+
+    .proud-projects .projects a {
+        position: absolute;
+        top: 92%;
+        left: 25%;
+    }
+
+    .proud-projects .download-links {
+        margin-bottom: 120px;
+    }
+
+    .proud-projects .about-project {
+        flex-direction: column-reverse;
+    }
+
+    .proud-projects .left-block {
+        gap: 0;
+    }
+
+    .proud-projects .left-block .title p {
+        margin-bottom: 0;
+    }
+
+    .proud-projects .left-block p {
+        font-size: 14px;
+    }
+
+    .proud-projects .right-block img {
+        width: 100%;
+    };
+
+    .proud-projects .title p {
+        width: 100%;
+    }
+
+    .proud-projects ul {
+        flex-wrap: wrap;
+    }
+
+    .proud-projects li {
+        margin-bottom: 12px;
+    };
+
+    /* DISCUSS-PROJECT */
+
+    .discuss-projects .container {
+        gap: 120px;
+    }
+
+    .discuss-projects .title {
+        width: 120%;
+    }
+
+    .discuss-projects .inputs {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .discuss-projects .contact-form {
+        margin-bottom: 50px;
+    }
+
+    .discuss-projects form input {
+        width: 100%;
+    }
+
+    .discuss-projects form a {
+        align-self: center;
+        width: 80%;
+    }
+
+    /* DEVELOPMENT-STAGES */
+
+    .development-stages {
+        min-height: 1450px;
+    }
+
+    .development-stages .title {
+        width: 80%;
+    }
+
+    /* TEAM */
+
+    .team .title p {
+        width: 100%;
+    }
+
+    .team .left-block {
+        gap: 0;
+    }
+
+    .team .video {
+        padding-top: 30px;
+    }
+
+    .team .video img {
+        width: 95%;
+    }
+
+    .team .left-block .statistics {
+        margin-top: 70%;
+    }
+
+    .team .statistics p {
+        font-size: 14px;
+    }
+
+    .team .statistics p span {
+        font-size: 28px;
+    }
+
+    /* GET-BOOK */
+
+    .get-book .title {
+        width: 55%;
+    }
+
+    .get-book .container {
+        position: relative;
+        flex-direction: column;
+        gap: 100px;
+        max-height: 1000px;
+    }
+
+    .get-book .left-block {
+        gap: 250px;
+    }
+
+    .get-book .contact-form {
+        width: 50%;
+        margin-left: 8%;
+    }
+
+    .get-book form {
+        gap: 60px;
+    }
+
+    .get-book form .top-label {
+        gap: 60px;
+    }
+
+    .get-book .contact-form a {
+        align-self: flex-start;
+    }
+
+    .book {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+    }
+
+    .book img {
+        width: 160px
+    };
+
+    /* FAQ */
+
+    .faq .left-block {
+        gap: 0;
+    }
+
+    .faq .questions  {
+        gap: 0;
+    }
+
+    .faq .question {
+        justify-content: unset;
+        position: relative;
+    }
+
+    .faq .question .faq-icon {
+        align-self: center;
+        position: absolute;
+        left: 55%;
+        top: 20px;
+    }
+
+    .faq .question .faq-icon--active {
+        
+    }
+
+    .faq .questions .question-text {
+        width: 65%;
+    }
+
+    .faq .questions .question-text h3 {
+        font-size: 20px;
+        width: 80%;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .faq .questions .question-text p {
+        font-size: 15px;
     }
 
     /* FOOTER */

@@ -2,3 +2,115 @@
     position: relative;
     z-index: 2;
 }
+
+.proud-projects .title p {
+    width: 60%;
+    margin-bottom: 54px;
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects ul {
+    display: flex;
+    padding: 0;
+}
+
+.projects li {
+    color: #101828;
+    /* SF Title 3 Medium */
+    font-family: "SF Pro Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; 
+    padding: 0 16px;
+}
+
+.projects li:first-of-type::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #2D66EE;
+    left: 10;
+    width: 100%;
+    transition: ease-out 1s;
+}
+
+.projects a {
+    color: #FFF;
+    font-family: "SF Pro Text";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.about-project {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.about-project .right-block {
+    margin-top: 30px;
+}
+
+.about-project .left-block .title p {
+    width: 100%;
+}
+
+.about-project p {
+    color: #475467;
+    /* SF Title 3 Regular */
+    font-family: "SF Pro Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 40px;
+}
+
+.about-project p span {
+    color: #2D66EE;
+}
+
+.proud-projects .category-icons {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.category-icons .country, .category-icons .industry {
+    display: flex;
+    align-items: center;
+}
+
+.proud-projects .statistics {
+    display: flex;
+    gap: 48px;
+    color:#667085;
+    /* SF Caption 1 Regular */
+    font-family: "SF Pro Text";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.statistics p span {
+    color: #101828;
+    font-family: "Inter";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+}
+
+.proud-projects .download-links{
+    display: flex;
+    gap: 16px;
+}

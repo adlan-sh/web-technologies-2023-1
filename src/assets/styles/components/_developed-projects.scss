@@ -2,3 +2,42 @@
     position: relative;
     z-index: 2;
 }
+
+.developed-projects .title {
+    width: 50%;
+}
+
+.industries {
+    display: flex;
+    justify-content: space-between;
+}
+
+.industries ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+.developed-projects li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.developed-projects li img {
+    padding: 10px;
+    border-radius: 100px;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+.developed-projects li span {
+    color: #101828;
+    /* SF Title 3 Medium */
+    font-family: "SF Pro Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}

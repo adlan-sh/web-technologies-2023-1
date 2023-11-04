@@ -1,0 +1,29 @@
+.team .container {
+    display: flex;
+    gap: 24px;
+}
+
+.team .statistics {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.team .statistics p {
+    color: #667085;
+    /* SF Text Medium */
+    font-family: "SF Pro Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.team .statistics p span {
+    color: #101828;
+    font-family: "Inter";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+}
