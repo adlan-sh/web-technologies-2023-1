@@ -15,8 +15,8 @@ const renderPostItem = item => `
     </a>
 `
 
-const getPostItems = ({ limit, page }) => {
-    return fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
+const getPostItems = async ({ limit, page }) => {
+    return await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
         .then(async res => {
             const total = +res.headers.get('x-total-count')
             const items = await res.json()
@@ -54,7 +54,7 @@ const init = () => {
     new Catalog(catalog, { 
         renderItem: renderPostItem,
         getItems: getPostItems
-     }).init()
+    }).init()
 }
 
 if (document.readyState === 'loading') {
