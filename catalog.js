@@ -2,7 +2,7 @@ import { Catalog } from "./src/components/catalog.js"
 
 const renderPostItem = item => `
     <a  
-        href="posts/${item.id}"
+        href="post.html?id=${item.id}"
         class="post-item"
     >
         <span class="post-item__title">
@@ -20,8 +20,8 @@ const getPostItems = async ({ limit, page }) => {
         .then(async res => {
             const total = +res.headers.get('x-total-count')
             const items = await res.json()
-            return { items, total }
-        })
+            return {items, total}
+        }).catch(e => console.log("Error:", e));
 }
 
 const renderPhotoItem = item => `
@@ -40,18 +40,18 @@ const renderPhotoItem = item => `
     </a>
 `
 
-const getPhotoItems = ({ limit, page }) => {
-    return fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`)
+const getPhotoItems = async ({ limit, page }) => {
+    return await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`)
         .then(async res => {
             const total = +res.headers.get('x-total-count')
             const items = await res.json()
             return { items, total }
-        })
+        }).catch(e => console.log("Error:", e));
 }
 
 const init = () => {
     const catalog = document.getElementById('catalog')
-    new Catalog(catalog, { 
+    new Catalog(catalog, {
         renderItem: renderPostItem,
         getItems: getPostItems
     }).init()
