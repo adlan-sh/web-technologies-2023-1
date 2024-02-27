@@ -1,6 +1,8 @@
 import Auth from "../services/auth.js";
 import location from "../services/location.js";
 import loading from "../services/loading.js";
+import Todos from "../services/todos.js";
+import Form from "../components/form.js";
 
 const init = async () => {
     const { ok: isLogged } = await Auth.me()
@@ -62,11 +64,11 @@ const init = async () => {
     }
     const createTodoList = async () => {
         const todos = await Todos.getAll();
-        document.querySelector('.todos').innerHTML = '';
+        document.querySelector('.todo-list').innerHTML = '';
         loading.stop();
         todos.forEach(todo => {
             const todoHTML = createTodo(todo);
-            document.querySelector('.todos')
+            document.querySelector('.todo-list')
                 .appendChild(todoHTML);
         });
     }
@@ -74,7 +76,7 @@ const init = async () => {
     const addTodo = async (description) => {
         loading.start();
         const response = await Todos.create(description);
-        console.log(response);
+        //console.log(response);
         if(response.ok) {
             await createTodoList();
         } else {

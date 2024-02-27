@@ -4,6 +4,7 @@ export default class Todos {
     static async create(description) {
         try {
             const response = await api('/todo', { method: 'POST', body: JSON.stringify({ description: description }) });
+            //console.log(response)
             return response;
         } catch (e) {
             console.log(e);
@@ -23,7 +24,6 @@ export default class Todos {
     static async getAll() {
         try {
             const response = await api('/todo');
-            console.log(response);
             return response.data;
         } catch (e) {
             console.log(e);
