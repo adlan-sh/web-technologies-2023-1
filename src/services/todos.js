@@ -4,7 +4,6 @@ export default class Todos {
     static async create(description) {
         try {
             const response = await api('/todo', { method: 'POST', body: JSON.stringify({ description: description }) });
-            //console.log(response)
             return response;
         } catch (e) {
             console.log(e);
