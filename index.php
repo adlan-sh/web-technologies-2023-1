@@ -1,6 +1,21 @@
 <?php
     include 'upload.php';
 
+    function gallery_log() {
+        if (!is_dir('logs/')) {
+            mkdir('logs/');
+        }
+        $log = date('l, Y/m/d. H:i:s, e.') . PHP_EOL;
+        $dest = 'logs/log.txt';
+        if (count(file($dest)) > 9) {
+            $log_files_number = count(array_slice(scandir('logs'), 2)) - 1;
+            rename($dest, 'logs/log' . $log_files_number . '.txt');
+        }
+        file_put_contents($dest, $log, FILE_APPEND);
+    }
+
+    gallery_log();
+
     $messages = [
         'ok' => "Файл загружен",
         'error' => "Ошибка загрузки"
