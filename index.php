@@ -125,6 +125,21 @@ createMenu($menu);
 
 echo("<hr>");
 
+// Задание 6
+echo("<h3>Задание 6</h3>");
+
+foreach ($dict as $reg => $cities) {
+    echo $reg . ': <br>';
+    foreach ($cities as $city) {
+        if (preg_match('/К/', $city)) {
+            echo $city . ', ';
+        }
+    }
+    echo '<br>';
+}
+
+echo("<hr>");
+
 ?>
 
 <!DOCTYPE html>
